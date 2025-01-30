@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="title">Products</h2>
+    <div  *ngIf="isAdmin" class="mb-3">
+      <button (click)="onAddProduct()" class="btn btn-success">Add New Product</button>
+    </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let product of products">
+      <div class="card border-primary mb-3">
+        <div class="card-header bg-primary text-white">{{ product.productName }}</div>
+        <div class="card-body">
+          <h5 class="card-title">{{ product.productName }}</h5>
+          <p class="card-text">
+            <strong>ID:</strong> {{ product.productId }}<br>
+            <strong>Added:</strong> {{ product.addedTimestamp }}<br>
+            <strong>In Stock:</strong> {{ product.inStock ? '✅' : '❌' }}<br>
+            <strong>Stock Arrival:</strong> {{ product.stockArrivalDate || 'N/A' }}
+          </p>
+          <div *ngIf="isAdmin">
+            <button (click)="onEditProduct(product.productId)" class="btn btn-primary">Edit</button>
+            <button (click)="onDeleteProduct(product.productId)" class="btn btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

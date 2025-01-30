@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5">
+        <div class="card-header bg-primary text-white">
+          <h4 class="card-title mb-0">Edit Product</h4>
+        </div>
+        <div class="card-body">
+          <form (submit)="saveChanges()">
+            <div class="form-group mb-3">
+              <label for="productName">Product Name:</label>
+              <input id="productName" [(ngModel)]="product.productName" name="productName" type="text" class="form-control" required>
+            </div>
+            <div class="form-group form-check mb-3">
+              <input id="inStock" [(ngModel)]="product.inStock" name="inStock" type="checkbox" class="form-check-input">
+              <label for="inStock" class="form-check-label">In Stock</label>
+            </div>
+            <div class="form-group mb-3">
+              <label for="stockArrivalDate">Stock Arrival Date:</label>
+              <input id="stockArrivalDate" [(ngModel)]="product.stockArrivalDate" name="stockArrivalDate" type="date" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Save Changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

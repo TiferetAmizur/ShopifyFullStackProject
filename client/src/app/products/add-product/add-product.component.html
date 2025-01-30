@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card mt-5">
+        <div class="card-header bg-primary text-white">
+          <h4 class="card-title mb-0">Add New Product</h4>
+        </div>
+        <div class="card-body">
+          <form (ngSubmit)="onSubmit()">
+            <div class="mb-3">
+              <label for="productName" class="form-label">Product Name</label>
+              <input type="text" id="productName" class="form-control" [(ngModel)]="newProduct.productName" name="productName" required />
+            </div>
+            <div class="mb-3">
+              <label for="stockArrivalDate" class="form-label">Stock Arrival Date</label>
+              <input type="date" id="stockArrivalDate" class="form-control" [(ngModel)]="newProduct.stockArrivalDate" name="stockArrivalDate" />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" id="inStock" class="form-check-input" [(ngModel)]="newProduct.inStock" name="inStock" />
+              <label class="form-check-label" for="inStock">Available for Sale</label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Add Product</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "z5PsogOizlGkxrca4HwdWaKO5EZWjXHNm5ClYpZF8Ls=",
+  "Source": "WebAppShopify",
+  "BasePath": "_content/WebAppShopify",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
